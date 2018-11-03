@@ -1,6 +1,6 @@
 ## Github Card Component
 
-Using React and Github's API I build an app that show us; name,  profile photo and company from any Github's users.
+Using React and Github's API I build an app that allows us to make a simple search and returns name,  profile photo and company from any Github's users.
 
 <i>My English is not very well</i>
 
