@@ -15,7 +15,7 @@ const Card = (props) => {
         </div>
         <div>{props.company}</div>
         <button
-          //when I click here should trigger App's delete funcition how can I call that func from here
+          //when I click here should trigger App's delete 
           onClick = { () => props.delete()}
           className="btn btn-danger btn-sm">Delete</button>
       </div>
