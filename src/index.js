@@ -16,7 +16,7 @@ const Card = (props) => {
         <div>{props.company}</div>
         <button
           //when I click here should trigger App's delete 
-          onClick = { () => props.delete()}
+          onClick = { () => props.delete(props.id)}
           className="btn btn-danger btn-sm">Delete</button>
       </div>
     </div>
@@ -74,17 +74,17 @@ class App extends React.Component {
   };
   
   addNewCard = (cardInfo) => {
+    console.log(cardInfo);
   	this.setState(prevState => ({
     	cards: prevState.cards.concat(cardInfo)
     }))
   };
   
-  deleteCard = () => {
-    alert("some code to delete a user");  
-    /* this.setState(prevState => ({
-        //array.filter creates a new array with elements who pass the foo
-        cards: prevState.cards.filter(card => card !== selectedCard)
-      })); */
+  deleteCard = cardId => {
+    this.setState(({cards}) => ({        
+      //array.filter creates a new array with elements who pass the foo
+      cards: cards.filter(card => card.id !== cardId)     
+    }));
   }
 
 	render(){
